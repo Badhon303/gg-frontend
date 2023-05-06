@@ -3,7 +3,7 @@ import React from "react"
 const ProductsSvg = () => {
   // e6ebee
   return (
-    <div className="flex space-x-14 overflow-auto scrollbar-hide mt-10">
+    <div className="flex space-x-8 overflow-auto scrollbar-hide mt-10">
       <div className="relative w-[120px]">
         <div className="flex justify-center">
           <img
