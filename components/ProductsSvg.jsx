@@ -3,7 +3,7 @@ import React from "react"
 const ProductsSvg = () => {
   // e6ebee
   return (
-    <div className="flex space-x-8 overflow-auto scrollbar-hide mt-10">
+    <div className="flex space-x-14 overflow-auto scrollbar-hide mt-10">
       <div className="relative w-[120px]">
         <div className="flex justify-center">
           <img
@@ -13,7 +13,7 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
           True Wireless Earbuds
         </div>
       </div>
@@ -26,7 +26,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Neckbands</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Neckbands
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -37,7 +39,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Smart Watches</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Smart Watches
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -48,7 +52,7 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
           True Wireless Earbuds
         </div>
       </div>
@@ -61,7 +65,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Neckbands</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Neckbands
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -72,7 +78,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Smart Watches</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Smart Watches
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -83,7 +91,7 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
           True Wireless Earbuds
         </div>
       </div>
@@ -96,7 +104,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Neckbands</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Neckbands
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -107,7 +117,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Smart Watches</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Smart Watches
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -118,7 +130,7 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
           True Wireless Earbuds
         </div>
       </div>
@@ -131,7 +143,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Neckbands</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Neckbands
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -142,7 +156,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Smart Watches</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Smart Watches
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -153,7 +169,7 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
           True Wireless Earbuds
         </div>
       </div>
@@ -166,7 +182,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Neckbands</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Neckbands
+        </div>
       </div>
       <div className="relative w-[120px]">
         <div className="flex justify-center">
@@ -177,7 +195,9 @@ const ProductsSvg = () => {
           />
           <span className="bg-[#e6ebee] w-[68px] h-[68px] absolute top-6 rounded-full -z-10"></span>
         </div>
-        <div className="font-bold text-sm text-center pt-6">Smart Watches</div>
+        <div className="font-bold text-sm text-center pt-6 min-w-[120px]">
+          Smart Watches
+        </div>
       </div>
     </div>
   )

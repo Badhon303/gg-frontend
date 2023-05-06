@@ -4,22 +4,75 @@ import { BsChevronDown } from "react-icons/bs"
 import { FiSearch } from "react-icons/fi"
 
 const data = [
-  { id: 1, name: "Home", url: "/" },
-  { id: 2, name: "About", url: "/about" },
-  { id: 3, name: "Categories", subMenu: true },
-  { id: 4, name: "Contact", url: "/contact" },
+  { id: 1, name: "Categories", subMenu: true },
+  { id: 2, name: "Daily Deals", url: "/about" },
+  { id: 3, name: "Gift With ReTech", url: "/" },
+  { id: 4, name: "More", url: "/contact" },
 ]
 
 const subMenuData = [
-  { id: 1, name: "Jordan", doc_count: 11 },
-  { id: 2, name: "Sneakers", doc_count: 8 },
-  { id: 3, name: "Running shoes", doc_count: 64 },
-  { id: 4, name: "Football shoes", doc_count: 107 },
+  {
+    id: 1,
+    name: "True Wireless Earbuds",
+    doc_count: 11,
+    img: "True_Wireless_Earphones_small.svg",
+  },
+  { id: 2, name: "Neckbands", doc_count: 8, img: "boAt_Neckbands_small.svg" },
+  {
+    id: 3,
+    name: "Smart Watches",
+    doc_count: 64,
+    img: "Smart_Watches_small.svg",
+  },
+  {
+    id: 4,
+    name: "Wireless Headphones",
+    doc_count: 107,
+    img: "Over_Ear_Headphones_small.svg",
+  },
+  {
+    id: 5,
+    name: "True Wireless Earbuds",
+    doc_count: 11,
+    img: "True_Wireless_Earphones_small.svg",
+  },
+  { id: 6, name: "Neckbands", doc_count: 8, img: "boAt_Neckbands_small.svg" },
+  {
+    id: 7,
+    name: "Smart Watches",
+    doc_count: 64,
+    img: "Smart_Watches_small.svg",
+  },
+  {
+    id: 8,
+    name: "Wireless Headphones",
+    doc_count: 107,
+    img: "Over_Ear_Headphones_small.svg",
+  },
+  {
+    id: 9,
+    name: "True Wireless Earbuds",
+    doc_count: 11,
+    img: "True_Wireless_Earphones_small.svg",
+  },
+  { id: 10, name: "Neckbands", doc_count: 8, img: "boAt_Neckbands_small.svg" },
+  {
+    id: 11,
+    name: "Smart Watches",
+    doc_count: 64,
+    img: "Smart_Watches_small.svg",
+  },
+  {
+    id: 12,
+    name: "Wireless Headphones",
+    doc_count: 107,
+    img: "Over_Ear_Headphones_small.svg",
+  },
 ]
 
 const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
   return (
-    <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
+    <ul className="flex flex-col lg:hidden font-bold absolute top-[50px] md:top-[60px] left-0 w-full h-[calc(100vh-45px)] bg-white border-t text-black">
       {data.map((item) => {
         return (
           <React.Fragment key={item.id}>
@@ -34,25 +87,33 @@ const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                 </div>
 
                 {showCatMenu && (
-                  <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
-                    {subMenuData.map((submenu) => {
-                      return (
-                        <Link
-                          href="/"
-                          key={submenu.id}
-                          onClick={() => {
-                            setShowCatMenu(false)
-                            setMobileMenu(false)
-                          }}
-                        >
-                          <li className="py-4 px-8 border-t flex justify-between">
-                            {submenu.name}
-                            <span className="text-sm opacity-50">78</span>
-                          </li>
-                        </Link>
-                      )
-                    })}
-                  </ul>
+                  <div className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
+                    <div className="overflow-auto">
+                      <div className="max-h-[485px]">
+                        {subMenuData.map((submenu) => {
+                          return (
+                            <Link
+                              href="/"
+                              key={submenu.id}
+                              onClick={() => {
+                                setShowCatMenu(false)
+                                setMobileMenu(false)
+                              }}
+                            >
+                              <div className="py-4 px-8 border-t flex">
+                                <img
+                                  src={`/products/${submenu.img}`}
+                                  alt={submenu.img}
+                                  className="px-5"
+                                />
+                                {submenu.name}
+                              </div>
+                            </Link>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  </div>
                 )}
               </li>
             ) : (
