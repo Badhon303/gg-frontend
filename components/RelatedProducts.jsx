@@ -22,8 +22,8 @@ const RelatedProducts = () => {
       <div className="text-2xl font-bold mb-5">you Might Also Like</div>
       <Carousel
         responsive={responsive}
-        containerclassName="-mx-[10px]"
-        itemclassName="px-[10px]"
+        containerClass="-mx-[10px]"
+        itemClass="px-[10px]"
       >
         <ProductCard />
         <ProductCard />

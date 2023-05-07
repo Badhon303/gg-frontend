@@ -5,7 +5,7 @@ const ProfilePopUp = () => {
     <div
       className="absolute profile-picture z-10 w-screen max-w-[260px] px-4 mt-3.5 -right-28 sm:px-0 opacity-100 translate-y-0"
       id="headlessui-popover-panel-:r9:"
-      tabindex="-1"
+      tabIndex="-1"
       data-headlessui-state="open"
     >
       <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
@@ -177,7 +177,7 @@ const ProfilePopUp = () => {
                 id="headlessui-switch-:rc:"
                 role="switch"
                 type="button"
-                tabindex="0"
+                tabIndex="0"
                 aria-checked="false"
                 data-headlessui-state=""
               >
