@@ -18,7 +18,7 @@ const RelatedProducts = () => {
     },
   }
   return (
-    <div className="mt-[50px] md:mt-[100px] md:mb-0">
+    <div className="w-full container mx-auto mt-[50px] md:mt-[100px] md:mb-0">
       <div className="text-2xl font-bold mb-5">you Might Also Like</div>
       <Carousel
         responsive={responsive}

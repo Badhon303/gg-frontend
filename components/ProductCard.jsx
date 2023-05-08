@@ -39,9 +39,12 @@ const ProductCard = () => {
           </svg>
           <span className="text-sm ml-1 text-slate-500">4.9 (98 reviews)</span>
         </div>
-        <h2 className="text-base pb-2 font-semibold text-black/[0.9] tracking-normal">
-          Product Name
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-base pb-2 font-semibold text-black/[0.9] tracking-normal">
+            Product Name
+          </h2>
+          <p>In Stock</p>
+        </div>
         <div className="flex items-center text-black/[0.5]">
           {/* <p className="text-lg font-semibold mr-2">$20.00</p> */}
           <div className="flex items-center border-2 border-green-500 rounded-lg py-1 px-2 md:py-1.5 md:px-2.5 text-base font-bold">

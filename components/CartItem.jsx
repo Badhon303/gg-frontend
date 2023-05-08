@@ -19,7 +19,7 @@ const CartItem = () => {
         <div className="flex flex-col md:flex-row justify-between">
           {/* PRODUCT TITLE */}
           <div className="text-lg md:text-2xl font-semibold text-black/[0.8]">
-            EOD
+            EOD Airdopes 131
           </div>
 
           {/* PRODUCT SUBTITLE */}
@@ -42,9 +42,9 @@ const CartItem = () => {
                   className="w-4 h-4"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </button>
@@ -63,9 +63,9 @@ const CartItem = () => {
                   className="w-4 h-4"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </button>

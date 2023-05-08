@@ -6,8 +6,8 @@ import { FiSearch } from "react-icons/fi"
 const data = [
   { id: 1, name: "Categories", subMenu: true },
   { id: 2, name: "Daily Deals", url: "/about" },
-  { id: 3, name: "Gift With ReTech", url: "/" },
-  { id: 4, name: "More", url: "/contact" },
+  // { id: 3, name: "Gift With ReTech", url: "/" },
+  // { id: 4, name: "More", url: "/contact" },
 ]
 
 const subMenuData = [
