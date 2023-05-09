@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard"
 
 const WishList = () => {
   return (
-    <div className="max-w-4xl mx-auto pt-14 sm:pt-26 pb-24 lg:pb-32">
+    <div className="max-w-5xl mx-auto pt-14 sm:pt-26 pb-24 lg:pb-32">
       <div className="space-y-10 sm:space-y-12">
         <h2 className="text-2xl sm:text-3xl font-semibold">
           List of saved products
