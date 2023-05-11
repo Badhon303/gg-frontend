@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      poppins: "Poppins, sans-serif",
       oswald: "Oswald, sans-serif",
       urbanist: "Urbanist, sans-serif",
-      poppins: "Poppins, sans-serif",
     },
     extend: {},
   },

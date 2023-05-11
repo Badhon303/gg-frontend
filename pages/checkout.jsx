@@ -1,6 +1,13 @@
+import { useState } from "react"
 import Wrapper from "@/components/Wrapper"
 
 const CheckOut = () => {
+  const [showContactInfo, setShowContactInfo] = useState(false)
+  const [showShippingAddress, setShowShippingAddress] = useState(false)
+  const [showPaymentMethod, setShowPaymentMethod] = useState(true)
+  const [radioSelect, setRadioSelect] = useState("Card")
+  console.log("radioValue: ", radioSelect)
+
   return (
     <Wrapper>
       <main className="container py-16 lg:pb-28 lg:pt-20 ">
@@ -24,11 +31,11 @@ const CheckOut = () => {
           <div className="flex-1">
             <div className="space-y-8">
               <div id="ContactInfo" className="scroll-mt-24">
-                <div className="border border-slate-200 rounded-xl overflow-hidden z-0">
+                <div className="border border-slate-200  rounded-xl overflow-hidden z-0">
                   <div className="flex flex-col sm:flex-row items-start p-6 ">
                     <span className="hidden sm:block">
                       <svg
-                        className="w-6 h-6 text-slate-700 mt-0.5"
+                        className="w-6 h-6 text-slate-700  mt-0.5"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +64,7 @@ const CheckOut = () => {
                       </svg>
                     </span>
                     <div className="sm:ml-8">
-                      <h3 className=" text-slate-700 flex ">
+                      <h3 className=" text-slate-700  flex ">
                         <span className="uppercase tracking-tight">
                           CONTACT INFO
                         </span>
@@ -82,11 +89,22 @@ const CheckOut = () => {
                         </span>
                       </div>
                     </div>
-                    <button className="py-2 px-4 bg-slate-50 hover:bg-slate-100 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg">
+                    <button
+                      className="py-2 px-4 bg-slate-50 hover:bg-slate-100  mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg"
+                      onClick={() => {
+                        setShowContactInfo(!showContactInfo)
+                        setShowShippingAddress(showContactInfo ? true : false)
+                        setShowPaymentMethod(false)
+                      }}
+                    >
                       Change
                     </button>
                   </div>
-                  <div className="border-t border-slate-200 px-6 py-7 space-y-4 sm:space-y-6 hidden">
+                  <div
+                    className={`${
+                      !showContactInfo && "hidden"
+                    } border-t border-slate-200  px-6 py-7 space-y-4 sm:space-y-6 block`}
+                  >
                     <div className="flex justify-between flex-wrap items-baseline">
                       <h3 className="text-lg font-semibold">
                         Contact infomation
@@ -100,27 +118,27 @@ const CheckOut = () => {
                     </div>
                     <div className="max-w-lg">
                       <label
-                        className="md:text-base font-medium text-neutral-900 text-sm"
+                        className="text-base font-medium text-neutral-900  md:text-sm"
                         data-nc-id="Label"
                       >
                         Your phone number
                       </label>
                       <input
                         type="tel"
-                        className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                        className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white  disabled:bg-neutral-200  rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                         defaultValue="+808 xxx"
                       />
                     </div>
                     <div className="max-w-lg">
                       <label
-                        className="md:text-base font-medium text-neutral-900 text-sm"
+                        className="text-base font-medium text-neutral-900  md:text-sm"
                         data-nc-id="Label"
                       >
                         Email address
                       </label>
                       <input
                         type="email"
-                        className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                        className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white  disabled:bg-neutral-200  rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                       />
                     </div>
                     <div>
@@ -129,24 +147,31 @@ const CheckOut = () => {
                           id="uudai"
                           name="uudai"
                           type="checkbox"
-                          className="focus:ring-action-primary text-primary-500 rounded border-slate-400 hover:border-slate-700 bg-transparent focus:ring-primary-500 w-6 h-6"
+                          className="focus:ring-action-primary text-primary-500 rounded border-slate-400 hover:border-slate-700 bg-transparent  focus:ring-primary-500 w-6 h-6"
                           defaultChecked=""
                         />
                         <label
                           htmlFor="uudai"
                           className="pl-2.5 sm:pl-3.5 flex flex-col flex-1 justify-center select-none"
                         >
-                          <span className="text-slate-900  ">
+                          <span className="text-slate-900   ">
                             Email me news and offers
                           </span>
                         </label>
                       </div>
                     </div>
                     <div className="flex flex-col sm:flex-row pt-6">
-                      <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  disabled:bg-opacity-90 bg-slate-900 hover:bg-slate-800 text-slate-50 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
+                      <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  disabled:bg-opacity-90 bg-slate-900  hover:bg-slate-800 text-slate-50 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 ">
                         Save and next to Shipping
                       </button>
-                      <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  bg-white text-slate-700 hover:bg-gray-100 mt-3 sm:mt-0 sm:ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
+                      <button
+                        className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 bg-white text-slate-700  hover:bg-gray-100  mt-3 sm:mt-0 sm:ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000"
+                        onClick={() => {
+                          setShowContactInfo(false)
+                          setShowShippingAddress(true)
+                          setShowPaymentMethod(false)
+                        }}
+                      >
                         Cancel
                       </button>
                     </div>
@@ -223,35 +248,46 @@ const CheckOut = () => {
                         </span>
                       </div>
                     </div>
-                    <button className="py-2 px-4 bg-slate-50 hover:bg-slate-100 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg">
+                    <button
+                      className="py-2 px-4 bg-slate-50 hover:bg-slate-100 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg"
+                      onClick={() => {
+                        setShowContactInfo(false)
+                        setShowShippingAddress(!showShippingAddress)
+                        setShowPaymentMethod(showShippingAddress ? true : false)
+                      }}
+                    >
                       Change
                     </button>
                   </div>
-                  <div className="border-t border-slate-200 px-6 py-7 space-y-4 sm:space-y-6 hidden">
+                  <div
+                    className={`${
+                      !showShippingAddress && "hidden"
+                    } border-t border-slate-200 px-6 py-7 space-y-4 sm:space-y-6 block`}
+                  >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           First name
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="Cole"
                         />
                       </div>
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           Last name
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="Enrico "
                         />
                       </div>
@@ -259,28 +295,28 @@ const CheckOut = () => {
                     <div className="sm:flex space-y-4 sm:space-y-0 sm:space-x-3">
                       <div className="flex-1">
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           Address
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           placeholder=""
                           defaultValue="123, Dream Avenue, USA"
                         />
                       </div>
                       <div className="sm:w-1/3">
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           Apt, Suite *
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="55U - DD5 "
                         />
                       </div>
@@ -288,25 +324,25 @@ const CheckOut = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           City
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="Norris"
                         />
                       </div>
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           Country
                         </label>
-                        <select className="nc-Select h-11 mt-1.5 block w-full text-sm rounded-2xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white">
+                        <select className="h-11 mt-1.5 block w-full text-sm rounded-2xl border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white">
                           <option value="United States">United States</option>
                           <option value="United States">Canada</option>
                           <option value="United States">Mexico</option>
@@ -321,34 +357,34 @@ const CheckOut = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3">
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           State/Province
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="Texas"
                         />
                       </div>
                       <div>
                         <label
-                          className="md:text-base font-medium text-neutral-900 text-sm"
+                          className="text-base font-medium text-neutral-900 md:text-sm"
                           data-nc-id="Label"
                         >
                           Postal code
                         </label>
                         <input
                           type="text"
-                          className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
+                          className="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white disabled:bg-neutral-200 rounded-2xl text-sm font-normal h-11 px-4 py-3 mt-1.5"
                           defaultValue="2500 "
                         />
                       </div>
                     </div>
                     <div>
                       <label
-                        className="md:text-base font-medium text-neutral-900 text-sm"
+                        className="text-base font-medium text-neutral-900 md:text-sm"
                         data-nc-id="Label"
                       >
                         Address type
@@ -400,10 +436,17 @@ const CheckOut = () => {
                       </div>
                     </div>
                     <div className="flex flex-col sm:flex-row pt-6">
-                      <button className=" relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  disabled:bg-opacity-90 bg-slate-900 hover:bg-slate-800 text-slate-50 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
+                      <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 disabled:bg-opacity-90 bg-slate-900  hover:bg-slate-800 text-slate-50  shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
                         Save and next to Payment
                       </button>
-                      <button className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  bg-white text-slate-700 hover:bg-gray-100 mt-3 sm:mt-0 sm:ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
+                      <button
+                        className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 bg-white text-slate-700  hover:bg-gray-100  mt-3 sm:mt-0 sm:ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000"
+                        onClick={() => {
+                          setShowContactInfo(false)
+                          setShowShippingAddress(false)
+                          setShowPaymentMethod(true)
+                        }}
+                      >
                         Cancel
                       </button>
                     </div>
@@ -484,11 +527,22 @@ const CheckOut = () => {
                         <span className="ml-3">xxx-xxx-xx55</span>
                       </div>
                     </div>
-                    <button className="py-2 px-4 bg-slate-50 hover:bg-slate-100 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg">
+                    <button
+                      className="py-2 px-4 bg-slate-50 hover:bg-slate-100 mt-5 sm:mt-0 sm:ml-auto text-sm font-medium rounded-lg"
+                      onClick={() => {
+                        setShowPaymentMethod(!showPaymentMethod)
+                        setShowShippingAddress(false)
+                        setShowContactInfo(showPaymentMethod ? true : false)
+                      }}
+                    >
                       Change
                     </button>
                   </div>
-                  <div className="border-t border-slate-200 px-6 py-7 space-y-6 block">
+                  <div
+                    className={`${
+                      !showPaymentMethod && "hidden"
+                    } border-t border-slate-200 px-6 py-7 space-y-6 block`}
+                  >
                     <div>
                       <div className="flex items-start space-x-4 sm:space-x-6">
                         <div className="flex items-center text-sm sm:text-base pt-3.5">
@@ -497,8 +551,11 @@ const CheckOut = () => {
                             name="payment-method"
                             type="radio"
                             className="focus:ring-action-primary text-primary-500 rounded-full border-slate-400 hover:border-slate-700 bg-transparent focus:ring-primary-500 w-6 h-6"
-                            defaultValue="Credit-Card"
-                            defaultChecked=""
+                            value="Card"
+                            checked={radioSelect === "Card"}
+                            onChange={(e) => setRadioSelect(e.target.value)}
+                            // defaultValue="Credit-Card"
+                            // defaultChecked="Card"
                           />
                         </div>
                         <div className="flex-1">
@@ -554,7 +611,14 @@ const CheckOut = () => {
                             </div>
                             <p className="font-medium">Debit / Credit Card</p>
                           </label>
-                          <div className="mt-6 mb-4 space-y-3 sm:space-y-5 block">
+                          <div
+                            // className={`${
+                            //   radioSelect !== "Card" ? "hidden" : ""
+                            // } mt-6 mb-4 space-y-3 sm:space-y-5 block`}
+                            className={`${
+                              radioSelect !== "Card" && "hidden"
+                            } mt-6 mb-4 space-y-3 sm:space-y-5 block`}
+                          >
                             <div className="max-w-lg">
                               <label
                                 className="md:text-base font-medium text-neutral-900 text-sm"
@@ -623,7 +687,9 @@ const CheckOut = () => {
                             name="payment-method"
                             type="radio"
                             className="focus:ring-action-primary text-primary-500 rounded-full border-slate-400 hover:border-slate-700 bg-transparent focus:ring-primary-500 w-6 h-6"
-                            defaultValue="Internet-banking"
+                            value="Bkash"
+                            checked={radioSelect === "Bkash"}
+                            onChange={(e) => setRadioSelect(e.target.value)}
                           />
                         </div>
                         <div className="flex-1">
@@ -632,7 +698,7 @@ const CheckOut = () => {
                             className="flex items-center space-x-4 sm:space-x-6"
                           >
                             <div className="p-2.5 rounded-xl border-2 border-gray-200">
-                              <svg
+                              {/* <svg
                                 className="w-6 h-6 sm:w-7 sm:h-7"
                                 viewBox="0 0 24 24"
                                 fill="none"
@@ -673,11 +739,137 @@ const CheckOut = () => {
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
                                 ></path>
+                              </svg> */}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-6 h-6 sm:w-7 sm:h-7"
+                                viewBox="-20 -20 150 150"
+                                fill="none"
+                              >
+                                <g fill="none">
+                                  <path
+                                    fill="#D12053"
+                                    d="M96.58 62.45l-53.03-8.31 7.03 31.6z"
+                                  />
+                                  <path
+                                    fill="#E2136E"
+                                    d="M96.58 62.45L56.62 6.93 43.56 54.15z"
+                                  />
+                                  <path
+                                    fill="#D12053"
+                                    d="M42.32 53.51L.45 0l54.83 6.55z"
+                                  />
+                                  <path
+                                    fill="#9E1638"
+                                    d="M23.25 31.15L0 9.24h6.12z"
+                                  />
+                                  <path
+                                    fill="#D12053"
+                                    d="M107.89 35.46l-9.84 26.69L82.1 40.09z"
+                                  />
+                                  <path
+                                    fill="#E2136E"
+                                    d="M56.77 84.14l38.61-15.51L97 63.7z"
+                                  />
+                                  <path
+                                    fill="#9E1638"
+                                    d="M25.89 113.41l16.54-58.02 8.39 37.75z"
+                                  />
+                                  <path
+                                    fill="#E2136E"
+                                    d="M109.43 35.67l-4.06 11.02 14.64-.24z"
+                                  />
+                                </g>
                               </svg>
                             </div>
-                            <p className="font-medium">Internet banking</p>
+                            <p className="font-medium">Bkash</p>
                           </label>
-                          <div className="mt-6 mb-4 hidden">
+                          <div
+                            className={`${
+                              radioSelect !== "Bkash" && "hidden"
+                            } mt-6 mb-4`}
+                          >
+                            <p className="text-sm">
+                              Your order will be delivered to you after you
+                              transfer to:
+                            </p>
+                            <ul className="mt-3.5 text-sm text-slate-500 space-y-2">
+                              <li>
+                                <h3 className="text-base text-slate-800 font-semibold mb-1">
+                                  ChisNghiax
+                                </h3>
+                              </li>
+                              <li>
+                                {" "}
+                                Bank name:{" "}
+                                <span className="text-slate-900 font-medium">
+                                  Example Bank Name
+                                </span>
+                              </li>
+                              <li>
+                                {" "}
+                                Account number:{" "}
+                                <span className="text-slate-900 font-medium">
+                                  555 888 777
+                                </span>
+                              </li>
+                              <li>
+                                {" "}
+                                Sort code:{" "}
+                                <span className="text-slate-900 font-medium">
+                                  999
+                                </span>
+                              </li>
+                              <li>
+                                {" "}
+                                IBAN:{" "}
+                                <span className="text-slate-900 font-medium">
+                                  IBAN
+                                </span>
+                              </li>
+                              <li>
+                                {" "}
+                                BIC:{" "}
+                                <span className="text-slate-900 font-medium">
+                                  BIC/Swift
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-start space-x-4 sm:space-x-6">
+                        <div className="flex items-center text-sm sm:text-base pt-3.5">
+                          <input
+                            id="Internet-banking"
+                            name="payment-method"
+                            type="radio"
+                            className="focus:ring-action-primary text-primary-500 rounded-full border-slate-400 hover:border-slate-700 bg-transparent focus:ring-primary-500 w-6 h-6"
+                            value="Nagad"
+                            checked={radioSelect === "Nagad"}
+                            onChange={(e) => setRadioSelect(e.target.value)}
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <label
+                            htmlFor="Internet-banking"
+                            className="flex items-center space-x-4 sm:space-x-6"
+                          >
+                            <div className="p-2.5 rounded-xl border-2 border-gray-200">
+                              <img
+                                src="/social/Nagad.svg"
+                                className="w-6 h-6 sm:w-7 sm:h-7"
+                              />
+                            </div>
+                            <p className="font-medium">Nagad</p>
+                          </label>
+                          <div
+                            className={`${
+                              radioSelect !== "Nagad" && "hidden"
+                            } mt-6 mb-4`}
+                          >
                             <p className="text-sm">
                               Your order will be delivered to you after you
                               transfer to:
@@ -736,7 +928,9 @@ const CheckOut = () => {
                             name="payment-method"
                             type="radio"
                             className="focus:ring-action-primary text-primary-500 rounded-full border-slate-400 hover:border-slate-700 bg-transparent focus:ring-primary-500 w-6 h-6"
-                            defaultValue="Wallet"
+                            value="COD"
+                            checked={radioSelect === "COD"}
+                            onChange={(e) => setRadioSelect(e.target.value)}
                           />
                         </div>
                         <div className="flex-1">
@@ -780,9 +974,13 @@ const CheckOut = () => {
                                 ></path>
                               </svg>
                             </div>
-                            <p className="font-medium">Google / Apple Wallet</p>
+                            <p className="font-medium">Cash on Delivery</p>
                           </label>
-                          <div className="mt-6 mb-4 space-y-6 hidden">
+                          <div
+                            className={`${
+                              radioSelect !== "COD" && "hidden"
+                            } mt-6 mb-4 space-y-6`}
+                          >
                             <div className="text-sm prose">
                               <p>
                                 Lorem ipsum dolor sit amet consectetur
@@ -799,7 +997,14 @@ const CheckOut = () => {
                       <button className="Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  disabled:bg-opacity-90 bg-slate-900 hover:bg-slate-800 text-slate-50 shadow-xl w-full max-w-[240px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
                         Confirm order
                       </button>
-                      <button className="Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  bg-white text-slate-700 hover:bg-gray-100 ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000">
+                      <button
+                        className="Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  bg-white text-slate-700 hover:bg-gray-100 ml-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000"
+                        onClick={() => {
+                          setShowContactInfo(true)
+                          setShowShippingAddress(false)
+                          setShowPaymentMethod(false)
+                        }}
+                      >
                         Cancel
                       </button>
                     </div>
