@@ -255,7 +255,7 @@ const StartExplore = () => {
         <div className="grid gap-4 md:gap-7 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -263,7 +263,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">
@@ -315,7 +315,7 @@ const StartExplore = () => {
           </div>
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -323,7 +323,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">
@@ -375,7 +375,7 @@ const StartExplore = () => {
           </div>
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -383,7 +383,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">
@@ -435,7 +435,7 @@ const StartExplore = () => {
           </div>
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -443,7 +443,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">
@@ -495,7 +495,7 @@ const StartExplore = () => {
           </div>
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -503,7 +503,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">
@@ -555,7 +555,7 @@ const StartExplore = () => {
           </div>
           <div className="relative w-full aspect-w-12 aspect-h-11 h-0 rounded-3xl overflow-hidden bg-white hover:shadow-lg transition-shadow ">
             <div>
-              <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
+              {/* <div className="absolute bottom-0 right-0 max-w-[280px] opacity-80">
                 <img
                   alt=""
                   width="358px"
@@ -563,7 +563,7 @@ const StartExplore = () => {
                   src="/gadget-1.webp"
                   style={{ color: "transparent" }}
                 />
-              </div>
+              </div> */}
               <div className="absolute inset-5 sm:inset-8 flex flex-col justify-between">
                 <div className="flex justify-between items-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden z-0 bg-indigo-50">

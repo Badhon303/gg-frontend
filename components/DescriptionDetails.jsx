@@ -2,9 +2,9 @@ import React from "react"
 
 const DescriptionDetails = () => {
   return (
-    <div class="w-full container mx-auto mt-20">
-      <h2 class="text-2xl font-semibold">Product Details</h2>
-      <div class="prose prose-sm sm:prose sm:max-w-4xl mt-7">
+    <div className="w-full container mx-auto mt-20">
+      <h2 className="text-2xl font-semibold">Product Details</h2>
+      <div className="prose prose-sm sm:prose sm:max-w-4xl mt-7">
         <p>
           The patented eighteen-inch hardwood Arrowhead deck --- finely mortised
           in, makes this the strongest and most rigid canoe ever built. You

@@ -12,7 +12,7 @@ const HeroCarousel = () => {
         // showIndicators={false}
         showStatus={false}
       >
-        <div className="flex flex-col md:flex-row items-center justify-around bg-[#e3ffe6] min-h-[700px]">
+        <div className="flex flex-col md:flex-row items-center justify-around bg-[#e3ffe6] min-h-[550px] md:min-h-[700px]">
           <div className="flex flex-[.7] items-center justify-start pt-4 md:pt-0">
             <div className="space-y-5 sm:space-y-6 mx-20">
               <span className="text-base md:text-xl text-slate-700 font-medium">
@@ -25,7 +25,7 @@ const HeroCarousel = () => {
           </div>
           <div className="flex items-center">
             <img
-              className="w-[500px] h-[550px]"
+              className="w-[300px] h-[350px] md:w-[500px] md:h-[550px]"
               src="/gadget-1.webp"
               alt="product Image"
             />

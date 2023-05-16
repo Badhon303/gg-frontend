@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Wrapper from "./Wrapper"
 import ProfilePopUp from "./ProfilePopUp"
+import CartPopUp from "./CartPopUp"
 
 import Link from "next/link"
 import Menu from "./Menu"
@@ -17,6 +18,7 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [showCatMenu, setShowCatMenu] = useState(false)
   const [showProfilePopUp, setShowProfilePopUp] = useState(false)
+  const [showCartPopUp, setShowCartPopUp] = useState(false)
   const [show, setShow] = useState("translate-y-0")
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -39,6 +41,12 @@ const Header = () => {
       e.target.closest(".profile-picture") === null
     ) {
       setShowProfilePopUp(false)
+    }
+    if (
+      e.target.closest(".cart-menu") === null &&
+      e.target.closest(".cart-picture") === null
+    ) {
+      setShowCartPopUp(false)
     }
   }
 
@@ -113,14 +121,26 @@ const Header = () => {
           {/* Icon end */}
 
           {/* Icon start */}
-          <Link href="/cart">
+          {/* <Link href="/cart">
             <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
               <BsCart3 className="text-[20px] md:text-[24px]" />
               <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
                 21
               </div>
             </div>
-          </Link>
+          </Link> */}
+          <div className="cart-menu relative">
+            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
+              <BsCart3
+                className="text-[20px] md:text-[24px]"
+                onClick={() => setShowCartPopUp(!showCartPopUp)}
+              />
+              <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
+                21
+              </div>
+            </div>
+            {showCartPopUp && <CartPopUp />}
+          </div>
           {/* Icon end */}
 
           {/* Mobile icon start */}

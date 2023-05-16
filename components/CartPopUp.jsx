@@ -1,9 +1,13 @@
 import React from "react"
 
-const Test = () => {
+const CartPopUp = () => {
+  const remove = () => {
+    console.log("remove")
+  }
+
   return (
     <div
-      className="hidden md:block absolute z-10 w-screen max-w-xs sm:max-w-md px-4 mt-3.5 -right-28 sm:right-0 sm:px-0 opacity-100 translate-y-0"
+      className="absolute cart-picture z-10 w-screen max-w-[350px] px-4 mt-3.5 -right-10 sm:px-0 opacity-100 translate-y-0"
       tabIndex="-1"
     >
       <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
@@ -59,6 +63,7 @@ const Test = () => {
                       <button
                         type="button"
                         className="font-medium text-primary-6000 "
+                        onClick={() => remove()}
                       >
                         Remove
                       </button>
@@ -209,4 +214,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default CartPopUp
