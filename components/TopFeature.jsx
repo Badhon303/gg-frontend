@@ -1,5 +1,9 @@
 import Wrapper from "./Wrapper"
 import Image from "next/image"
+import BatteryCharging from "../public/Topfeature/BatteryCharging.png"
+import music from "../public/Topfeature/music.png"
+import bluetooth from "../public/Topfeature/bluetooth.png"
+import tws from "../public/Topfeature/tws.png"
 
 const TopFeature = () => {
   return (
@@ -11,48 +15,28 @@ const TopFeature = () => {
         </h1>
       </div>
       <div className="flex items-center">
-        <Image
-          src="/TopFeature/BatteryCharging.png"
-          alt="warranty"
-          width={100}
-          height={100}
-        />
+        <Image src={BatteryCharging} alt="warranty" width={100} height={100} />
         <span className="font-semibold text-2xl tracking-tight">
           Nonstop <br /> Music upto <br />
           60 hours
         </span>
       </div>
       <div className="flex items-center">
-        <Image
-          src="/TopFeature/music.png"
-          alt="warranty"
-          width={100}
-          height={100}
-        />
+        <Image src={music} alt="warranty" width={100} height={100} />
         <span className="font-semibold text-2xl tracking-tight">
           Designed <br /> for Music <br />
           Lovers
         </span>
       </div>
       <div className="flex items-center">
-        <Image
-          src="/TopFeature/bluetooth.png"
-          alt="warranty"
-          width={100}
-          height={100}
-        />
+        <Image src={bluetooth} alt="warranty" width={100} height={100} />
         <span className="font-semibold text-2xl tracking-tight">
           Bluetooth <br />
           v5.0
         </span>
       </div>
       <div className="flex items-center">
-        <Image
-          src="/TopFeature/tws.png"
-          alt="warranty"
-          width={100}
-          height={100}
-        />
+        <Image src={tws} alt="warranty" width={100} height={100} />
         <span className="font-semibold text-2xl tracking-tight">
           650mAh <br /> pocket friendly <br />
           charging case
