@@ -100,14 +100,12 @@ const Header = () => {
               <FiSearch className="text-[20px] md:text-[25px]" />
             </button>
           </div>
-          <button
-            onClick={() => setShowProfilePopUp(!showProfilePopUp)}
-            // onMouseEnter={() => setShowProfilePopUp(true)}
-            // onMouseLeave={() => setShowProfilePopUp(false)}
-            className="account-menu relative"
-          >
+          <button className="account-menu relative">
             <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer">
-              <FiUser className="text-[20px] md:text-[24px]" />
+              <FiUser
+                className="text-[20px] md:text-[24px]"
+                onClick={() => setShowProfilePopUp(!showProfilePopUp)}
+              />
             </div>
             {showProfilePopUp && <ProfilePopUp />}
           </button>

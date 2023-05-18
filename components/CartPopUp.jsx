@@ -7,7 +7,7 @@ const CartPopUp = () => {
 
   return (
     <div
-      className="absolute cart-picture z-10 w-screen max-w-[350px] px-4 mt-3.5 -right-10 sm:px-0 opacity-100 translate-y-0"
+      className="absolute cart-picture z-10 w-screen max-w-[350px] md:max-w-[450px] px-4 mt-3.5 -right-10 sm:px-0 opacity-100 translate-y-0"
       tabIndex="-1"
     >
       <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
