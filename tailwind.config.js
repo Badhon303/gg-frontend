@@ -15,3 +15,7 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography")],
 }
+
+// 491323180781-5jjerrd6fujim80a4qu7334sbh05igog.apps.googleusercontent.com
+// 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
+// http://localhost:1337/api/auth/google/callback
